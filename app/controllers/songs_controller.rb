@@ -6,7 +6,7 @@ class SongsController < ApplicationController
     @artists = Artist.all
 
     
-    
+
     erb :'/songs/edit'
   end
 
