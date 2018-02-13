@@ -17,6 +17,7 @@ class SongsController < ApplicationController
   end
 
   post :'/songs' do
+    Artist.create(name: "Person with a Face")
     @song = Song.create(params[:song])
     # if !params[:artist_name].empty?
       @song.artist = Artist.create(name: "Person with a Face")
