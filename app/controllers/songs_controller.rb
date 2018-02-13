@@ -10,7 +10,7 @@ class SongsController < ApplicationController
 
   post '/songs/:slug' do
     @song = Song.find_by_slug(params[:slug])
-    @song = Song.update(params[:song])
+    @song.update(params[:song])
     @song.artist = Artist.find_by(name: params[:artist_name])
     flash[:message] = "Successfully updated song."
 
