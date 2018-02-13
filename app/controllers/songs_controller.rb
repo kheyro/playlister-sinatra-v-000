@@ -1,5 +1,11 @@
 class SongsController < ApplicationController
 
+  get '/songs/new' do
+    @artists = Artist.all
+    @genres = Genre.all
+    erb :'songs/new'
+  end
+  
   get '/songs' do
     @songs = Song.all
     erb :'songs/index'
@@ -11,11 +17,7 @@ class SongsController < ApplicationController
     erb :'songs/show'
   end
 
-  get '/songs/new' do
-    @artists = Artist.all
-    @genres = Genre.all
-    erb :'songs/new'
-  end
+
 
   post :'/songs' do
 
