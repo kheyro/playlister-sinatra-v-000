@@ -12,6 +12,7 @@ class SongsController < ApplicationController
     @song = Song.find_by_slug(params[:slug])
     @song.update(params[:song])
     @artist = Artist.find_by(name: params[:artist_name])
+    @song.artist = !@artist ? Artist.create(name: params[:artist_name]) : @artist
     @song.save
     flash[:message] = "Successfully updated song."
 
