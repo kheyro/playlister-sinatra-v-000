@@ -1,6 +1,6 @@
 class SongsController < ApplicationController
 
-  get '/songs/:slug/edit'
+  get '/songs/:slug/edit' do
     @song = Song.find_by_slug(params[:slug])
     @genres = Genre.all
     @artists = Artist.all
