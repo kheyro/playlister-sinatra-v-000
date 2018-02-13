@@ -22,7 +22,7 @@ class SongsController < ApplicationController
       @artist = Artist.create(name: params[:artist_name])
       @artist.save
       @song.artist = @artist
-      
+
     # end
     binding.pry
     @song.save
