@@ -4,6 +4,9 @@ class SongsController < ApplicationController
     @song = Song.find_by_slug(params[:slug])
     @genres = Genre.all
     @artists = Artist.all
+
+    
+    
     erb :'/songs/edit'
   end
 
