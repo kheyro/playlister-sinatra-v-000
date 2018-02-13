@@ -9,7 +9,16 @@
     <label for="<%= genre.name %>"><%= genre.name %></label><input type="checkbox" name="song[genre_ids]" id="<%= genre.name %>" value="<%= genre.id %>">
   <% end %>
 
-  <h3>Create an artist:</h3>
+  <br><br>
+
+  <h3>Select an genre:</h3>
+  <% @genres.each do |genre| %>
+    <label for="<%= genre.name %>"><%= genre.name %></label><input type="checkbox" name="song[genre_ids]" id="<%= genre.name %>" value="<%= genre.id %>">
+  <% end %>
+
+  <br><br>
+
+  <h3>or, create an artist:</h3>
   <input type="text" name="artist_name" id="Artist Name" value="">
 
   <br><br>
