@@ -16,7 +16,7 @@ class SongsController < ApplicationController
   end
 
   post :'/songs' do
-    
+
     @artist = Artist.find_by(name: params[:artist_name])
 
     if !@artist
