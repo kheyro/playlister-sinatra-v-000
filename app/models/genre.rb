@@ -8,6 +8,6 @@ class Genre < ActiveRecord::Base
   end
 
   def self.find_by_slug(slug)
-    @genre = Genre.where("LOWER(name) = ?", Slugifiable.unslugify(slug))
+    Genre.where("LOWER(name) = ?", Slugifiable.unslugify(slug)).first
   end
 end
