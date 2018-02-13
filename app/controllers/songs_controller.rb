@@ -23,6 +23,8 @@ class SongsController < ApplicationController
       @artist = Artist.create(name: params[:artist_name])
     end
 
+    params[:song][:artist] = @artist
+
     @song = Song.create(params[:song])
 
   end
