@@ -1,6 +1,6 @@
 <form class="" action="/songs/<%= @song.slug %>" method="post">
 
-  <label for="Name">Song name: </label><input type="text" name="song[name]" id="Name" value="">
+  <label for="Name">Song name: </label><input type="text" name="<%= @song.name %>" id="Name" value="">
 
   <br><br>
 
