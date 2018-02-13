@@ -16,7 +16,7 @@ class SongsController < ApplicationController
     @genres = Genre.all
     erb :'songs/new'
   end
-  
+
   post :'/songs' do
 
   end
