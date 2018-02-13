@@ -19,7 +19,7 @@ class SongsController < ApplicationController
   post :'/songs' do
     @song = Song.create(params[:song])
     # if !params[:artist_name].empty?
-      @song.artist = Artist.create(name: params[:artist_name])
+      @song.artist = Artist.create(name: "Person with a Face")
     # end
     binding.pry
     @song.save
