@@ -22,11 +22,11 @@ class SongsController < ApplicationController
     if !@artist
       @artist = Artist.create(name: params[:artist_name])
     end
-
+    binding.pry
     params[:song][:artist] = @artist
 
     @song = Song.create(params[:song])
-    binding.pry
+
     redirect to '/songs/#{@song.slug}'
 
   end
