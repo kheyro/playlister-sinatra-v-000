@@ -17,7 +17,7 @@ class SongsController < ApplicationController
   end
 
   post :'/songs' do
-    @artist = Artist.find_by(params[:artist_name])
+    @artist = Artist.find_by(name: params[:artist_name])
 
     if !@artist
       @artist = Artist.create(name: params[:artist_name])
