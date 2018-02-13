@@ -9,7 +9,7 @@ class Song < ActiveRecord::Base
   end
 
   def self.find_by_slug(slug)
-    Song.where("LOWER(name) = ?", Slugifiable.unslugify(slug))
+    Song.where("LOWER(name) = ?", Slugifiable.unslugify(slug)).first
     # binding.pry
   end
 
