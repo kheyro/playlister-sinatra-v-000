@@ -5,8 +5,6 @@ class SongsController < ApplicationController
     @genres = Genre.all
     @artists = Artist.all
 
-    @song = Song.update(params[:song])
-
     erb :'/songs/edit'
   end
 
