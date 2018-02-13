@@ -7,7 +7,7 @@ class Artist < ActiveRecord::Base
   end
 
   def self.find_by_slug(slug)
-    Artist.where("LOWER(name) = ?", Slugifiable.unslugify(slug)).frist
+    Artist.where("LOWER(name) = ?", Slugifiable.unslugify(slug)).first
   end
 
 end
