@@ -5,7 +5,7 @@ class SongsController < ApplicationController
     @genres = Genre.all
     erb :'songs/new'
   end
-  
+
   get '/songs' do
     @songs = Song.all
     erb :'songs/index'
@@ -16,8 +16,6 @@ class SongsController < ApplicationController
     # binding.pry
     erb :'songs/show'
   end
-
-
 
   post :'/songs' do
 
