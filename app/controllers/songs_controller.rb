@@ -16,6 +16,7 @@ class SongsController < ApplicationController
   end
 
   post :'/songs' do
+    binding.pry
     @artist = Artist.find_by(name: params[:artist_name])
 
     if !@artist
