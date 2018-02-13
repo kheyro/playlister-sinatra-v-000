@@ -11,13 +11,6 @@
 
   <br><br>
 
-  <h3>Select an artist:</h3>
-  <% @artists.each do |artist| %>
-    <label for="<%= artist.name %>"><%= artist.name %></label><input type="checkbox" name="song[artist_id]" id="<%= artist.name %>" value="<%= artist.id %>">
-  <% end %>
-
-  <br><br>
-
   <h3>or, create an artist:</h3>
   <input type="text" name="artist_name" id="Artist Name" value="">
 
