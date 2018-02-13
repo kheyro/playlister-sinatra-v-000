@@ -1,5 +1,9 @@
 class SongsController < ApplicationController
 
+  get '/songs/:slug/edit'
+    
+  end
+
   get '/songs/new' do
     @artists = Artist.all
     @genres = Genre.all
